@@ -1,0 +1,211 @@
+/*шапка*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    height: 100px;
+}
+
+.menu-main {
+    list-style: none;
+    padding: 25px;
+    height: 27px;
+    text-align: right;
+    position: relative;
+
+}
+
+.menu-main li {
+    display: inline-block;
+}
+
+.menu-main li:after {
+    content: "|";
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menu-main li:last-child:after {
+    content: none;
+}
+
+.menu-main a {
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 34px 0 30px;
+    font-size: 23px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color .2s;
+}
+
+.name {
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 4px;
+    padding-bottom: 20px;
+    margin: 0 34px 0 30px;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    left: 13px;
+    top: 23px;
+}
+
+.menu-main a, .menu-main a:visited {
+    color: #f0f9f0;
+}
+
+.menu-main a.current, .menu-main a:hover {
+    color: #E0F2FF;
+}
+
+.menu-main a:before,
+.menu-main a:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: auto;
+    right: 50%;
+    bottom: -5px;
+    left: 50%;
+    background: #E0F2FF;
+    transition: .10s;
+}
+
+.menu-main a:hover:before, .menu-main .current:before {
+    left: 0;
+}
+
+.menu-main a:hover:after, .menu-main .current:after {
+    right: 0;
+}
+
+@media (max-width: 550px) {
+    .menu-main {
+        padding-top: 0;
+    }
+
+    .menu-main li {
+        display: block;
+    }
+
+    .menu-main li:after {
+        content: none;
+    }
+
+    .menu-main a {
+        padding: 25px 0 20px;
+        margin: 0 30px;
+    }
+}
+
+/*фон*/
+body {
+    background: url(../img/3.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.img-conteiner {
+    height: 475px;
+    float: left;
+    width: 10%;
+    margin-right: 3%;
+}
+
+h2 {
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 15px;
+    position: relative;
+    margin-top: 5px;
+    font-size: 38px;
+    color: white;
+}
+
+.welcome-index {
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 8px;
+    position: relative;
+    font-size: 58px;
+    margin-top: 5px;
+    color: white;
+}
+.game{
+    width: 250px;
+    height: 250px;
+    background: darkseagreen;
+    -moz-border-radius: 60px;
+    -webkit-border-radius: 60px;
+    border-radius: 60px;
+}
+.conteiner{
+    width: 950px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 35px;
+    justify-content: space-between;
+}
+
+
+/*contact*/
+
+.contact-information {
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 23px;
+    position: relative;
+    top: 13px;
+    left: 15px;
+    padding-bottom: 15px;
+    margin: 0 34px 0 30px;
+    font-size: 45px;
+    color: white;
+}
+
+.conteiner-contact {
+    width: 975px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 35px;
+    justify-content: space-between;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 5px;
+    position: relative;
+    font-size: 30px;
+    margin-top: 13px;
+    color: white;
+}
+
+.fafa {
+    color: white;
+}
+
+.link {
+    font-size: 2em;
+    margin-left: 91px;
+    margin-top: 5px;
+}
