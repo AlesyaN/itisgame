@@ -55,15 +55,15 @@ header {
     text-decoration: none;
     text-align: center;
     font-family: 'Ubuntu Condensed', sans-serif;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
     padding-bottom: 20px;
     margin: 0 34px 0 30px;
-    font-size: 26px;
+    font-size: 28px;
     text-transform: uppercase;
     color: white;
     position: absolute;
     left: 13px;
-    top: 23px;
+    top: 22px;
 }
 
 .menu-main a, .menu-main a:visited {
@@ -163,7 +163,46 @@ h2 {
     margin-top: 35px;
     justify-content: space-between;
 }
-
+/*count*/
+.nameCount{
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 4px;
+    font-size: 30px;
+    color: white;
+}
+.thisCount{
+    text-align: center;
+}
+#d{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 1px;
+    font-size: 28px;
+    color: white;
+}
+#h{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 1px;
+    font-size: 28px;
+    color: white;
+}
+#m{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 1px;
+    font-size: 28px;
+    color: white;
+}
+#s{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 1px;
+    font-size: 28px;
+    color: white;
+}
+.count{
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 1230px;
+}
 
 /*contact*/
 

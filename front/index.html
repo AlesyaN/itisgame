@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="js/count.js" type="text/babel"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Itis Game</title>
 </head>
@@ -16,10 +17,16 @@
         <li><a href="contact.html">Contact</a></li>
     </ul>
 </header>
+
+<div class="count">
+    <p class="nameCount"> before exams</p>
+   <div class="thisCount"> <span id="d"></span> <span id="h"></span> <span id="m"></span>
+       <span id="s"></span></div>
+</div>
+
 <h1 class="welcome-index">Hi, ITIS</h1>
 <h2>click</h2>
 <div class="conteiner">
-
    <div> <a href="js/random.html"><div class="game"></div></a>
        <h1>Prediction</h1></div>
 
