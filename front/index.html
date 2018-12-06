@@ -20,21 +20,37 @@
 
 <div class="count">
     <p class="nameCount"> before exams</p>
-   <div class="thisCount"> <span id="d"></span> <span id="h"></span> <span id="m"></span>
-       <span id="s"></span></div>
+    <div class="thisCount"><span id="d"></span> <span id="h"></span> <span id="m"></span>
+        <span id="s"></span></div>
 </div>
 
 <h1 class="welcome-index">Hi, ITIS</h1>
 <h2>click</h2>
 <div class="conteiner">
-   <div> <a href="js/random.html"><div class="game"></div></a>
-       <h1>Prediction</h1></div>
+    <div>
+        <div class="game"></div>
+        <h1>Prediction</h1>
+        <button id="button">Клик</button>
+    </div>
 
-    <div><div class="game"></div>
-        <h1>Mafia</h1></div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p class="prediction">prediction</p>
+            <p class="tegForRandom" id = "tegForRandom"></p>
+            <span class="close">&times;</span>
+        </div>
+    </div>
+    <script src="js/random.js"></script>
 
-    <div><div class="game"></div>
-    <h1>Crocodile</h1></div>
+    <div>
+        <div class="game"></div>
+        <h1>Mafia</h1>
+    </div>
+
+    <div>
+        <div class="game"></div>
+        <h1>Crocodile</h1>
+    </div>
 </div>
 </body>
 </html>

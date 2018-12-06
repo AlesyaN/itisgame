@@ -13,5 +13,25 @@ var prediction = [
     "Без булдрабыз!",
     "Алга!"
 ];
-var random = Math.floor(Math.random()*prediction.length);
-alert(prediction[random]);
+//alert(prediction[random]);
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("button");
+var span = document.getElementsByClassName("close")[0];
+var tegForRandom = document.getElementById("tegForRandom");
+
+btn.onclick = function () {
+    modal.style.display = "block";
+    var random = Math.floor(Math.random() * prediction.length);
+    tegForRandom.innerHTML = prediction[random];
+};
+
+span.onclick = function () {
+    modal.style.display = "none"
+};
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
