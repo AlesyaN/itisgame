@@ -115,9 +115,10 @@ header {
 }
 
 /*фон*/
-body {
-    background: url(../img/3.jpg) no-repeat center center fixed;
+#slide-show {
+    background: url(../img/0.jpg) no-repeat center center fixed;
     background-size: cover;
+    transition: background .5s ease-in;
 }
 
 .img-conteiner {
@@ -137,6 +138,16 @@ h2 {
     font-size: 38px;
     color: white;
 }
+h1 {
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 7px;
+    position: relative;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-left: 23px;
+    color: white;
+}
 
 .welcome-index {
     text-align: center;
@@ -150,17 +161,14 @@ h2 {
 .game{
     width: 250px;
     height: 250px;
-    background: darkseagreen;
-    -moz-border-radius: 60px;
-    -webkit-border-radius: 60px;
-    border-radius: 60px;
+    margin-top: -5px;
 }
 .conteiner{
-    width: 950px;
+    width: 1050px;
     display: flex;
     flex-direction: row;
     margin: 0 auto;
-    margin-top: 35px;
+    margin-top: 45px;
     justify-content: space-between;
 }
 /*count*/
@@ -201,7 +209,7 @@ h2 {
 .count{
     position: absolute;
     margin-top: -20px;
-    margin-left: 1241px;
+    margin-left: 1150px;
 }
 
 /*modal content prediction*/
@@ -217,17 +225,18 @@ h2 {
 .tegForRandom{
     font-family: 'Courier New', cursive;
     position: absolute;
-    margin-top: 8px;
+    margin-top: 12px;
     font-size: 27px;
     letter-spacing: 1px;
     text-shadow: 1px 1px 2px purple;
     color: #f0f9f0;
+    text-align: center;
     width: 50%;
     height: 22%;
 }
 .modal{
     display: none;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     left: 0;
     top: 0;
@@ -243,6 +252,7 @@ h2 {
     padding: 20px;
     width: 50%;
     height: 22%;
+    border: 1px solid white;
 }
 .close{
     color: #aaa;
@@ -254,7 +264,10 @@ h2 {
 }
 
 /*contact*/
-
+body{
+    background: url(../img/1.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
 .contact-information {
     text-decoration: none;
     text-align: center;
@@ -270,22 +283,12 @@ h2 {
 }
 
 .conteiner-contact {
-    width: 975px;
+    width: 1000px;
     display: flex;
     flex-direction: row;
     margin: 0 auto;
-    margin-top: 35px;
+    margin-top: 30px;
     justify-content: space-between;
-}
-
-h1 {
-    text-align: center;
-    font-family: 'Ubuntu Condensed', sans-serif;
-    letter-spacing: 5px;
-    position: relative;
-    font-size: 30px;
-    margin-top: 13px;
-    color: white;
 }
 
 .fafa {
@@ -294,6 +297,36 @@ h1 {
 
 .link {
     font-size: 2em;
-    margin-left: 91px;
-    margin-top: 5px;
+    margin-left: 89px;
+    margin-top: 3px;
 }
+
+.cName {
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 7px;
+    position: relative;
+    font-size: 30px;
+    margin-top: 8px;
+    margin-left: 0px;
+    color: white;
+}
+
+/*game img*/
+.game1{
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.game2{
+    margin-top: -15px;
+    border-radius: 10%;
+    border:2px solid rgba(67,231,231,0.57);
+}
+.mafiaH1{
+    margin-top: 50px;
+}
+.game3 {
+    border-radius: 10%;
+    border: 2px solid rgba(226,200,0,0.55);
+}
+/*end*/

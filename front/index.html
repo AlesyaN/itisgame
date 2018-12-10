@@ -5,9 +5,23 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="js/count.js" type="text/babel"></script>
     <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        var arr = ['0.jpg',
+            '1.jpg'];
+        var idx = 0;
+
+        function show(slides) {
+            if(idx >1) idx = 0;
+            document.getElementById('slide-show').style.backgroundImage = 'url(./img/' + slides[idx++] + ')';
+            console.log(idx);
+        }
+        setInterval("show(arr)", 4000);
+    </script>
+
     <title>Itis Game</title>
 </head>
-<body>
+<body id='slide-show'>
 <!--шапка-->
 <header>
     <a class="name">ITIS GAME</a>
@@ -28,9 +42,8 @@
 <h2>click</h2>
 <div class="conteiner">
     <div>
-        <div class="game"></div>
+        <div class="game"><img class="game1" id = "button" src="img/game1.jpg" width="280" height="280"> </div>
         <h1>Prediction</h1>
-        <button id="button">Клик</button>
     </div>
 
     <div id="myModal" class="modal">
@@ -43,14 +56,19 @@
     <script src="js/random.js"></script>
 
     <div>
-        <div class="game"></div>
-        <h1>Mafia</h1>
+        <div class="game"><img class="game2" src="img/game2.jpg" width="260" height="308"></div>
+        <h1 class="mafiaH1">Mafia</h1>
     </div>
 
     <div>
-        <div class="game"></div>
+        <div class="game"><img class="game3" src="img/game3.jpg" width="260" height="273"></div>
         <h1>Crocodile</h1>
     </div>
+
+    <!--<div class="fire" style= "position: fixed; bottom: 0px; right: -100px; top:-100px">-->
+        <!--<object type="application/x-shockwave-flash" data="http://all-blogspot.com/blog/swf/fireworks.swf" width="1000" height="800"><param name="wmode" value="transparent"></object>-->
+    <!--</div>-->
+
 </div>
 </body>
 </html>
