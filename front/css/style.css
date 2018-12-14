@@ -118,7 +118,7 @@ header {
 #slide-show {
     background: url(../img/0.jpg) no-repeat center center fixed;
     background-size: cover;
-    /*padding-right: 16px;*/
+    padding-right: 16px;
     transition: background .5s ease-in;
 }
 
@@ -318,7 +318,6 @@ body{
     border-radius: 50%;
     border: 2px solid white;
 }
-<<<<<<< HEAD
 
 .link {
     font-size: 2em;
@@ -474,16 +473,16 @@ body{
     text-align: center;
     line-height: 180px;
 }
-/*.game2{*/
-    /*margin-top: -15px;*/
-    /*border-radius: 10%;*/
-    /*border:2px solid rgba(67,231,231,0.57);*/
-/*}*/
-/*.mafiaH1{*/
-    /*margin-top: 50px;*/
-/*}*/
-/*.game3 {*/
-    /*border-radius: 10%;*/
-    /*border: 2px solid rgba(226,200,0,0.55);*/
-/*}*/
+.game2{
+    margin-top: -15px;
+    border-radius: 10%;
+    border:2px solid rgba(67,231,231,0.57);
+}
+.mafiaH1{
+    margin-top: 50px;
+}
+.game3 {
+    border-radius: 10%;
+    border: 2px solid rgba(226,200,0,0.55);
+}
 /*end*/
