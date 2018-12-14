@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mafia</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div id="dark">
+<header>
+    <a class="txt name">ITIS GAME</a>
+    <ul class="txt menu-main">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+    </ul>
+</header>
+<div id="warning" class="warning hide">
+    <button id="close" class="delete-btn big">x</button>
+    <div class="warning-text">There should be at least 5 players!</div>
+</div>
+<div id="register">
+    <h1 class="txt">MAFIA</h1>
+    <div class="txt description">Register players here</div>
+    <form id="form" class="txt">
+        <div id="list-of-users"></div>
+        <input class="new-player-input" autocomplete="off" id="new-user-text" type="text" placeholder="Name of new user">
+        <input id="next" class="start" type="button" onclick="checkNumOfPlayers()" value="NEXT">
+    </form>
+</div>
+<script src="../js/mafia/register.js"></script>
+</div>
+</body>
+</html>
