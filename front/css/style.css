@@ -429,7 +429,7 @@ body{
     margin-top: 5px;
     margin-bottom: 20px;
     font-family: 'Ubuntu Condensed', sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     color: white;
 }
 
@@ -485,4 +485,65 @@ body{
     border-radius: 10%;
     border: 2px solid rgba(226,200,0,0.55);
 }
+
+.container-left {
+    float: left;
+    width: 33%
+}
+
+.container-right {
+    float: left;
+    width: 33%;
+}
+
+.select-container {
+    text-align: center;
+}
+
+.block {
+    margin-right: 30px;
+    margin-left: 30px;
+    display: inline-block;
+}
+
+.select {
+    height: 45px;
+    width: 60px;
+    border-radius: 7px;
+    background-color: white;
+    border: none;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 18px;
+    opacity: 0.7;
+    outline: none;
+    margin-top: 10px;
+}
+
+.option {
+    border-color: transparent;
+    background-color: white;
+    opacity: 0.7;
+}
+
+.option:hover {
+    background-color: lightgreen;
+}
+
+.label {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+.blocks-container {
+    margin-top: 35px;
+}
+
+.wrong {
+    color: orange;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 18px;
+}
+
+
 /*end*/

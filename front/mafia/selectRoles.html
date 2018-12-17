@@ -3,15 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Select roles</title>
-
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<div style="color: red; display: none" id="wrong">Wrong!</div>
-<label for="mafia">Mafia:</label><select id="mafia"></select><br>
-<label for="detective">Detective:</label><select id="detective"></select><br>
-<label for="doctor">Doctor:</label><select id="doctor"></select><br>
-<label for="innocent">Innocent:</label><select id="innocent"></select><br>
-<input type="submit" value="Go!">
-<script src="../js/select.js"></script>
+<header>
+    <a class="txt name">ITIS GAME</a>
+    <ul class="txt menu-main">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+    </ul>
+</header>
+<div id="dark">
+    <div class="select-container">
+        <div id="warning" class="warning hide">
+            <button id="close" class="delete-btn big">x</button>
+            <div class="warning-text" style="font-size: 22px; margin-left: 10px" id="warning-dialog">There should be at least 1 mafia and 1 innocent!</div>
+        </div>
+        <h1>MAFIA</h1>
+        <div id="number-message" style="margin-bottom: 0" class="description"></div>
+        <div class="description">Select number of each role in the game</div>
+        <div class="wrong" id="wrong"></div>
+        <form id="form" class="blocks-container">
+            <div class="block">
+                <label class="label" for="mafia">Mafia:</label><br>
+                <select class="select" id="mafia"></select><br>
+            </div>
+            <div class="block">
+                <label class="label" for="detective">Detective:</label><br>
+                <select class="select" id="detective"></select><br>
+            </div>
+            <div class="block">
+                <label class="label" for="doctor">Doctor:</label><br>
+                <select class="select" id="doctor"></select><br>
+            </div>
+            <div class="block">
+                <label class="label" for="innocent">Innocent:</label><br>
+                <select class="select" id="innocent"></select><br>
+            </div>
+            <div>
+                <input id="next" style="margin-left: 0; margin-top:35px" class="start" onclick="validate()" type="button" value="NEXT">
+            </div>
+        </form>
+    </div>
+    <script src="../js/mafia/select.js"></script>
+</div>
 </body>
 </html>
