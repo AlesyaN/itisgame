@@ -162,12 +162,13 @@ h1 {
 .game{
     width: 250px;
     height: 250px;
-    margin-top: -5px;
+    margin-top: 3%;
 }
 .conteiner{
-    width: 1050px;
+    max-width: 1050px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin: 0 auto;
     margin-top: 45px;
     justify-content: space-between;
@@ -209,8 +210,8 @@ h1 {
 }
 .count{
     position: absolute;
-    margin-top: -20px;
-    margin-left: 1150px;
+    left: 83%;
+    top: 12%;
 }
 
 /*modal content prediction*/
@@ -233,7 +234,7 @@ h1 {
     color: #f0f9f0;
     text-align: center;
     width: 50%;
-    height: 22%;
+    height: 24%;
 }
 .modal{
     display: none;
@@ -252,7 +253,7 @@ h1 {
     margin: 15% auto;
     padding: 20px;
     width: 50%;
-    height: 22%;
+    height: 24%;
     border: 1px solid white;
 }
 .close{
@@ -474,14 +475,15 @@ body{
     line-height: 180px;
 }
 .game2{
-    margin-top: -15px;
+    margin-top: -10px;
     border-radius: 10%;
     border:2px solid rgba(67,231,231,0.57);
 }
 .mafiaH1{
-    margin-top: 50px;
+    top: 5%;
 }
 .game3 {
+    margin-top: 2%;
     border-radius: 10%;
     border: 2px solid rgba(226,200,0,0.55);
 }

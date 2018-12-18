@@ -14,7 +14,7 @@
         function show(slides) {
             if(idx >1) idx = 0;
             document.getElementById('slide-show').style.backgroundImage = 'url(./img/' + slides[idx++] + ')';
-            console.log(idx);
+
         }
         setInterval("show(arr)", 4000);
     </script>
@@ -24,7 +24,7 @@
 <body id='slide-show'>
 <!--шапка-->
 <header>
-    <a class="name">ITIS GAME</a>
+    <a class="name" href="index.html">ITIS GAME</a>
     <ul class="menu-main">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
