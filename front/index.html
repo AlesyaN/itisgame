@@ -14,7 +14,7 @@
         function show(slides) {
             if(idx >1) idx = 0;
             document.getElementById('slide-show').style.backgroundImage = 'url(./img/' + slides[idx++] + ')';
-            console.log(idx);
+
         }
         setInterval("show(arr)", 4000);
     </script>
@@ -22,15 +22,17 @@
     <title>Itis Game</title>
 </head>
 <body id='slide-show'>
+
 <!--шапка-->
-<header>
-    <a class="name">ITIS GAME</a>
-    <ul class="menu-main">
+<header >
+    <a class="name" href="index.html">ITIS GAME</a>
+    <ul class="menu-main" onselectstart="return false">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
 </header>
+
 
 <div class="count">
     <p class="nameCount"> before exams</p>
@@ -38,7 +40,8 @@
         <span id="s"></span></div>
 </div>
 
-<h1 class="welcome-index">Hi, ITIS</h1>
+
+<h1 class="welcome-index" id="welcome-index" onselectstart="return false">Hi, ITIS</h1>
 <h2>click</h2>
 <div class="conteiner">
     <div>
@@ -46,7 +49,7 @@
         <h1>Prediction</h1>
     </div>
 
-    <div id="myModal" class="modal">
+    <div id="myModal" class="modal" onselectstart="return false">
         <div class="modal-content">
             <p class="prediction">prediction</p>
             <p class="tegForRandom" id = "tegForRandom"></p>
@@ -56,7 +59,7 @@
     <script src="js/random.js"></script>
 
     <div>
-        <div class="game"><img class="game2" src="img/game2.jpg" width="260" height="308"></div>
+        <a href=""><div class="game"><img class="game2" src="img/game2.jpg" width="260" height="308"></div></a>
         <h1 class="mafiaH1">Mafia</h1>
     </div>
 
@@ -65,10 +68,10 @@
         <h1>Crocodile</h1>
     </div>
 
-    <!--<div class="fire" style= "position: fixed; bottom: 0px; right: -100px; top:-100px">-->
-        <!--<object type="application/x-shockwave-flash" data="http://all-blogspot.com/blog/swf/fireworks.swf" width="1000" height="800"><param name="wmode" value="transparent"></object>-->
-    <!--</div>-->
-
+    <div class="fire" id = "fire" style= "position: fixed; bottom: 0px; right:410px; top:-100px">
+        <object type="application/x-shockwave-flash" data="http://all-blogspot.com/blog/swf/fireworks.swf" width="800" height="800"><param name="wmode" value="transparent"></object>
+    </div>
+    <script src="js/salut.js"></script>
 </div>
 </body>
 </html>

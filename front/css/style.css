@@ -114,6 +114,11 @@ header {
     }
 }
 
+/*салют*/
+.fire {
+    display: none;
+}
+
 /*фон*/
 #slide-show {
     background: url(../img/0.jpg) no-repeat center center fixed;
@@ -139,6 +144,7 @@ h2 {
     font-size: 38px;
     color: white;
 }
+
 h1 {
     text-align: center;
     font-family: 'Ubuntu Condensed', sans-serif;
@@ -159,62 +165,72 @@ h1 {
     margin-top: 5px;
     color: white;
 }
-.game{
-    width: 250px;
-    height: 250px;
-    margin-top: -5px;
+
+.game {
+    max-width: 250px;
+    max-height: 250px;
+    margin-top: 3%;
 }
-.conteiner{
-    width: 1050px;
+
+.conteiner {
+    max-width: 1050px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin: 0 auto;
     margin-top: 45px;
     justify-content: space-between;
 }
+
 /*count*/
-.nameCount{
+.nameCount {
     text-align: center;
     font-family: 'Ubuntu Condensed', sans-serif;
     letter-spacing: 4px;
     font-size: 30px;
     color: white;
 }
-.thisCount{
+
+.thisCount {
     text-align: center;
 }
-#d{
+
+#d {
     font-family: 'Ubuntu Condensed', sans-serif;
     letter-spacing: 1px;
     font-size: 28px;
     color: white;
 }
-#h{
+
+#h {
     font-family: 'Ubuntu Condensed', sans-serif;
     letter-spacing: 1px;
     font-size: 28px;
     color: white;
 }
-#m{
+
+#m {
     font-family: 'Ubuntu Condensed', sans-serif;
     letter-spacing: 1px;
     font-size: 28px;
     color: white;
 }
-#s{
+
+#s {
     font-family: 'Ubuntu Condensed', sans-serif;
     letter-spacing: 1px;
     font-size: 28px;
     color: white;
 }
-.count{
+
+.count {
     position: absolute;
-    margin-top: -20px;
-    margin-left: 1150px;
+    left: 83%;
+    top: 12%;
 }
 
 /*modal content prediction*/
-.prediction{
+.prediction {
     font-family: 'Courier New';
     text-align: center;
     margin-top: -2%;
@@ -223,7 +239,8 @@ h1 {
     letter-spacing: 7px;
     color: aliceblue;
 }
-.tegForRandom{
+
+.tegForRandom {
     font-family: 'Courier New', cursive;
     position: absolute;
     margin-top: 12px;
@@ -233,9 +250,10 @@ h1 {
     color: #f0f9f0;
     text-align: center;
     width: 50%;
-    height: 22%;
+    height: 24%;
 }
-.modal{
+
+.modal {
     display: none;
     position: absolute;
     z-index: 1;
@@ -244,18 +262,20 @@ h1 {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color:rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.9);
 }
-.modal-content{
+
+.modal-content {
     background-image: url("https://north4you.com/images/blog-foto/severnoe-siyanie-murmansk-11_700x492.jpg");
     background-size: cover;
     margin: 15% auto;
     padding: 20px;
     width: 50%;
-    height: 22%;
+    height: 24%;
     border: 1px solid white;
 }
-.close{
+
+.close {
     color: #aaa;
     position: fixed;
     left: 74%;
@@ -265,10 +285,11 @@ h1 {
 }
 
 /*contact*/
-body{
+body {
     background: url(../img/1.jpg) no-repeat center center fixed;
     background-size: cover;
 }
+
 .contact-information {
     text-decoration: none;
     text-align: center;
@@ -284,12 +305,65 @@ body{
 }
 
 .conteiner-contact {
-    width: 1000px;
+    max-width: 1000px;
     display: flex;
     flex-direction: row;
     margin: 0 auto;
     margin-top: 30px;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.liya {
+    border: 3px #CCCCCC solid;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-transition: width 0.5s;
+    -moz-transition: width 0.5s;
+    -o-transition: width 0.5s;
+    transition: width 0.5s;
+
+}
+
+.liya:hover {
+    width: 300px;
+    height: 430px;
+}
+
+.kama {
+    border: 3px #CCCCCC solid;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-transition: width 0.5s;
+    -moz-transition: width 0.5s;
+    -o-transition: width 0.5s;
+    transition: width 0.5s;
+}
+
+.kama:hover {
+    width: 300px;
+    height: 430px;
+}
+
+.lesya {
+    border: 3px #CCCCCC solid;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-transition: width 0.5s;
+    -moz-transition: width 0.5s;
+    -o-transition: width 0.5s;
+    transition: width 0.5s;
+}
+
+.lesya:hover {
+    width: 300px;
+    height: 420px;
 }
 
 .fafa {
@@ -314,7 +388,7 @@ body{
 }
 
 /*game img*/
-.game1{
+.game1 {
     border-radius: 50%;
     border: 2px solid white;
 }
@@ -415,10 +489,12 @@ body{
     color: lightgreen;
     margin-bottom: 80px;
 }
+
 .start:hover {
     background-color: lightgreen;
     color: black;
 }
+
 .start:focus {
     outline: none;
 }
@@ -473,17 +549,21 @@ body{
     text-align: center;
     line-height: 180px;
 }
-.game2{
-    margin-top: -15px;
+
+.game2 {
+    margin-top: -10px;
     border-radius: 10%;
-    border:2px solid rgba(67,231,231,0.57);
+    border: 2px solid rgba(67, 231, 231, 0.57);
 }
-.mafiaH1{
-    margin-top: 50px;
+
+.mafiaH1 {
+    top: 5%;
 }
+
 .game3 {
+    margin-top: 2%;
     border-radius: 10%;
-    border: 2px solid rgba(226,200,0,0.55);
+    border: 2px solid rgba(226, 200, 0, 0.55);
 }
 
 .select-container {
