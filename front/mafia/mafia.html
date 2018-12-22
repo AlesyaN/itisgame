@@ -3,10 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Mafia</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <ul id="list-of-players">
+<div id="dark">
+<header>
+    <a class="fade name">ITIS GAME</a>
+    <ul class="fade menu-main">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
     </ul>
-    <script src="../js/mafia.js"></script>
+</header>
+<div id="warning" class="warning hide">
+    <div class="warning-text" style="font-size: 22px; margin-left: 10px" id="warning-dialog"></div>
+    <button id="close" class="start new-game">NEW GAME</button>
+</div>
+<h1 class="fade" style="margin-top: 0; margin-bottom: 30px">MAFIA</h1>
+<div id="list-of-players">
+</div>
+</div>
+    <script src="../js/mafia/mafia.js"></script>
 </body>
 </html>

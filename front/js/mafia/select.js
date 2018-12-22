@@ -54,6 +54,10 @@ function validate() {
     if (document.getElementById("mafia").value == 0 || document.getElementById("innocent") == 0) {
         dialog.classList.toggle("hide");
         document.getElementById("dark").classList.toggle("dark");
+        var txt = document.getElementsByClassName("txt");
+        for (var i = 0; i < txt.length; i++) {
+            txt[i].classList.toggle("fade-text");
+        }
     } else {
         form.submit();
     }

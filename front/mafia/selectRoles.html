@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<div id="dark">
 <header>
     <a class="txt name">ITIS GAME</a>
     <ul class="txt menu-main">
@@ -14,35 +15,34 @@
         <li><a href="../contact.html">Contact</a></li>
     </ul>
 </header>
-<div id="dark">
+    <div id="warning" class="warning hide">
+        <button id="close" class="delete-btn big">x</button>
+        <div class="warning-text" style="font-size: 22px; margin-left: 10px" id="warning-dialog">There should be at least 1 mafia and 1 innocent!</div>
+    </div>
     <div class="select-container">
-        <div id="warning" class="warning hide">
-            <button id="close" class="delete-btn big">x</button>
-            <div class="warning-text" style="font-size: 22px; margin-left: 10px" id="warning-dialog">There should be at least 1 mafia and 1 innocent!</div>
-        </div>
-        <h1>MAFIA</h1>
-        <div id="number-message" style="margin-bottom: 0" class="description"></div>
-        <div class="description">Select number of each role in the game</div>
+        <h1 class="txt">MAFIA</h1>
+        <div id="number-message" style="margin-bottom: 0" class="description txt"></div>
+        <div class="description txt">Select number of each role in the game</div>
         <div class="wrong" id="wrong"></div>
         <form id="form" class="blocks-container">
             <div class="block">
-                <label class="label" for="mafia">Mafia:</label><br>
+                <label class="label txt" for="mafia">Mafia:</label><br>
                 <select class="select" id="mafia"></select><br>
             </div>
             <div class="block">
-                <label class="label" for="detective">Detective:</label><br>
+                <label class="label txt" for="detective">Detective:</label><br>
                 <select class="select" id="detective"></select><br>
             </div>
             <div class="block">
-                <label class="label" for="doctor">Doctor:</label><br>
+                <label class="label txt" for="doctor">Doctor:</label><br>
                 <select class="select" id="doctor"></select><br>
             </div>
             <div class="block">
-                <label class="label" for="innocent">Innocent:</label><br>
+                <label class="label txt" for="innocent">Innocent:</label><br>
                 <select class="select" id="innocent"></select><br>
             </div>
             <div>
-                <input id="next" style="margin-left: 0; margin-top:35px" class="start" onclick="validate()" type="button" value="NEXT">
+                <input id="next" style="margin-left: 0; margin-top:35px" class="start txt" onclick="validate()" type="button" value="NEXT">
             </div>
         </form>
     </div>

@@ -486,16 +486,6 @@ body{
     border: 2px solid rgba(226,200,0,0.55);
 }
 
-.container-left {
-    float: left;
-    width: 33%
-}
-
-.container-right {
-    float: left;
-    width: 33%;
-}
-
 .select-container {
     text-align: center;
 }
@@ -545,5 +535,77 @@ body{
     font-size: 18px;
 }
 
+.mafia-container {
+    margin-left: 70px;
+    margin-right: 70px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+
+.card {
+    display: inline-block;
+    border-radius: 7px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    font-family: 'Ubuntu Condensed', sans-serif;
+
+}
+
+.fade-card {
+    background: rgba(255, 255, 255, 0.3);
+    /*opacity: 0.4;*/
+}
+
+.dark-mafia {
+    position: absolute;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.fade-fade {
+    opacity: 0.4;
+}
+
+.new-game {
+    height: 40px;
+    width: 100px;
+    font-size: 13px;
+}
+
+.kill {
+    border-radius: 7px;
+    background-color: transparent;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color: orange;
+    outline: none;
+    border: 2px solid orange;
+    height: 30px;
+    width: 70px;
+    font-size: 13px;
+}
+
+.kill:hover {
+    background-color: orange;
+    color: white;
+}
+
+.alive {
+    background-color: transparent;
+    border: 2px solid lightgreen;
+    color: lightgreen;
+}
+
+.alive:hover {
+    background-color: lightgreen;
+    color: white;
+}
 
 /*end*/
