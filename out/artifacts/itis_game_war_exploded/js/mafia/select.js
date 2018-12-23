@@ -1,4 +1,5 @@
-var count = 10;
+var names = document.getElementById("players").value.split("-");
+count = names.length;
 
 var roles = [
   document.getElementById("mafia"),
@@ -7,7 +8,7 @@ var roles = [
   document.getElementById("innocent")
 ];
 
-document.getElementById("number-message").innerHTML = "В игре " + (count - 1) + " игроков и 1 ведущий";
+document.getElementById("number-message").innerHTML = "В игре " + count + " участников и 1 ведущий";
 
 for (var i = 0; i < roles.length; i++) {
     for (var j = 0; j < count; j++) {
@@ -23,19 +24,20 @@ var button = document.getElementById("next");
 
 document.body.onchange = function (event) {
     var current = 0;
-    var wrong = document.getElementById("wrong");
+    var desc = document.getElementById("description");
     roles.forEach(function (role) {
         current += +role.value;
-        if (current >= count) {
-            wrong.innerHTML = "Слишком много игроков";
-            wrong.style.display = "block";
+        if (current > count) {
+            desc.innerHTML = "Слишком много ролей";
+            desc.style.color = "orange";
             button.onclick = null;
-        } else if (current + 1 < count) {
-            wrong.innerHTML = "Недостаточно игроков";
-            wrong.style.display = "block";
+        } else if (current < count) {
+            desc.innerHTML = "Слишком мало ролей";
+            desc.style.color = "orange";
             button.onclick = null;
         } else {
-            wrong.style.display = "none";
+            desc.innerHTML = "Распределите роли";
+            desc.style.color = "white";
             button.onclick = validate;
         }
     });
@@ -59,7 +61,23 @@ function validate() {
             txt[i].classList.toggle("fade-text");
         }
     } else {
-        form.submit();
+        $.ajax({
+            url: "/mafia",
+            type: "post",
+            data: {
+                "names": encodeURIComponent(document.getElementById("players").value),
+                "mafia": document.getElementById("mafia").value,
+                "detective": document.getElementById("detective").value,
+                "doctor": document.getElementById("doctor").value,
+                "innocent" :document.getElementById("innocent").value
+            },
+            success: function (msg) {
+                window.location = msg.url;
+            },
+            error: function (msg) {
+                alert("error");
+            }
+        });
     }
 }
 

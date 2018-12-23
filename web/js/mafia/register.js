@@ -33,23 +33,43 @@ form.onkeydown = function(event) {
     }
 };
 
+function isUnique(text) {
+    var flag = true;
+    for (var i = 0; i < users.length && flag; i++) {
+        console.log(users[i].name + " " + text);
+        if (users[i].name == text) {
+            flag = false;
+        }
+    }
+    return flag;
+}
+
 newUserInput.onkeydown = function(event) {
     if (event.keyCode == 13) {
+        var warning = document.getElementById("war");
         var text = newUserInput.value;
-        if (text != "") {
-            users.push(new User(text, true));
-            newUserInput.value = "";
-            var newUserContainer = document.createElement("div");
-            newUserContainer.setAttribute("class", "new-player");
-            var remove = document.createElement("button");
-            var userName = document.createElement("span");
-            userName.innerHTML = text;
-            remove.innerHTML = "x";
-            remove.setAttribute("class", "delete-btn");
-            remove.onclick = deleteUser;
-            newUserContainer.appendChild(userName);
-            newUserContainer.appendChild(remove);
-            listOfUsers.appendChild(newUserContainer);
+        console.log("new " + text);
+        if (isUnique(text)) {
+            if (text != "") {
+                users.push(new User(text, true));
+                newUserInput.value = "";
+                var newUserContainer = document.createElement("div");
+                newUserContainer.setAttribute("class", "new-player");
+                var remove = document.createElement("button");
+                var userName = document.createElement("span");
+                userName.innerHTML = text;
+                remove.innerHTML = "x";
+                remove.setAttribute("class", "delete-btn");
+                remove.onclick = deleteUser;
+                newUserContainer.appendChild(userName);
+                newUserContainer.appendChild(remove);
+                listOfUsers.appendChild(newUserContainer);
+                warning.innerHTML = "Зарегистрируйте игроков";
+                warning.style.color = "white";
+            }
+        } else {
+            warning.innerHTML = "Имена игроков должны быть уникальны!";
+            warning.style.color = "orange";
         }
     }
 };
@@ -60,7 +80,6 @@ function deleteUser(event) {
     for (var i = 0; i < users.length; i++) {
         if (users[i].name == name) {
             users.splice(i, 1);
-            console.log(users);
         }
     }
     event.target.parentNode.remove();
@@ -75,7 +94,27 @@ function checkNumOfPlayers() {
             txt[i].classList.toggle("fade-text");
         }
     } else {
-        form.submit();
+        var string = "";
+        for (var i = 0; i < users.length; i++) {
+            string += users[i].name + "-";
+        }
+        string = string.substring(0, string.length - 1);
+        console.log(string);
+        $.ajax({
+            url: "/select",
+            type: "post",
+            data: {
+                "names": encodeURIComponent(string)
+            },
+            success: function (msg) {
+                window.location = msg.url;
+            },
+            error: function (msg) {
+                alert("error");
+            }
+        });
+        
+
     }
 }
 

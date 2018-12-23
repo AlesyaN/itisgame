@@ -1,0 +1,683 @@
+/*шапка*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    height: 100px;
+}
+
+.menu-main {
+    list-style: none;
+    padding: 25px;
+    height: 27px;
+    text-align: right;
+    position: relative;
+
+}
+
+.menu-main li {
+    display: inline-block;
+}
+
+.menu-main li:after {
+    content: "|";
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menu-main li:last-child:after {
+    content: none;
+}
+
+.menu-main a {
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 34px 0 30px;
+    font-size: 23px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color .2s;
+}
+
+.name {
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 5px;
+    padding-bottom: 20px;
+    margin: 0 34px 0 30px;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    left: 13px;
+    top: 22px;
+}
+
+.menu-main a, .menu-main a:visited {
+    color: #f0f9f0;
+}
+
+.menu-main a.current, .menu-main a:hover {
+    color: #E0F2FF;
+}
+
+.menu-main a:before,
+.menu-main a:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: auto;
+    right: 50%;
+    bottom: -5px;
+    left: 50%;
+    background: #E0F2FF;
+    transition: .10s;
+}
+
+.menu-main a:hover:before, .menu-main .current:before {
+    left: 0;
+}
+
+.menu-main a:hover:after, .menu-main .current:after {
+    right: 0;
+}
+
+@media (max-width: 550px) {
+    .menu-main {
+        padding-top: 0;
+    }
+
+    .menu-main li {
+        display: block;
+    }
+
+    .menu-main li:after {
+        content: none;
+    }
+
+    .menu-main a {
+        padding: 25px 0 20px;
+        margin: 0 30px;
+    }
+}
+
+/*салют*/
+.fire {
+    display: none;
+}
+
+/*фон*/
+#slide-show {
+    background: url(../img/0.jpg) no-repeat center center fixed;
+    background-size: cover;
+    padding-right: 16px;
+    transition: background .5s ease-in;
+}
+
+.img-conteiner {
+    height: 475px;
+    float: left;
+    width: 10%;
+    margin-right: 3%;
+}
+
+h2 {
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 15px;
+    position: relative;
+    margin-top: 5px;
+    font-size: 38px;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 7px;
+    position: relative;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-left: 23px;
+    color: white;
+}
+
+.welcome-index {
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 8px;
+    position: relative;
+    font-size: 58px;
+    margin-top: 5px;
+    color: white;
+}
+
+.game {
+    max-width: 250px;
+    max-height: 250px;
+    margin-top: 3%;
+}
+
+.conteiner {
+    max-width: 1050px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 45px;
+    justify-content: space-between;
+}
+
+/*count*/
+.nameCount {
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 4px;
+    font-size: 30px;
+    color: white;
+}
+
+.thisCount {
+    text-align: center;
+}
+
+#d {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 1px;
+    font-size: 28px;
+    color: white;
+}
+
+#h {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 1px;
+    font-size: 28px;
+    color: white;
+}
+
+#m {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 1px;
+    font-size: 28px;
+    color: white;
+}
+
+#s {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 1px;
+    font-size: 28px;
+    color: white;
+}
+
+.count {
+    position: absolute;
+    left: 83%;
+    top: 12%;
+}
+
+/*modal content prediction*/
+.prediction {
+    font-family: 'Courier New';
+    text-align: center;
+    margin-top: -2%;
+    font-size: 33px;
+    text-shadow: 1px 2px 5px purple;
+    letter-spacing: 7px;
+    color: aliceblue;
+}
+
+.tegForRandom {
+    font-family: 'Courier New', cursive;
+    position: absolute;
+    margin-top: 12px;
+    font-size: 27px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px purple;
+    color: #f0f9f0;
+    text-align: center;
+    width: 50%;
+    height: 24%;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    background-image: url("https://north4you.com/images/blog-foto/severnoe-siyanie-murmansk-11_700x492.jpg");
+    background-size: cover;
+    margin: 15% auto;
+    padding: 20px;
+    width: 50%;
+    height: 24%;
+    border: 1px solid white;
+}
+
+.close {
+    color: #aaa;
+    position: fixed;
+    left: 74%;
+    margin-top: -2%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*contact*/
+body {
+    background: url(../img/1.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.contact-information {
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 23px;
+    position: relative;
+    top: 13px;
+    left: 15px;
+    padding-bottom: 15px;
+    margin: 0 34px 0 30px;
+    font-size: 45px;
+    color: white;
+}
+
+.conteiner-contact {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.liya {
+    border: 3px #CCCCCC solid;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-transition: width 0.5s;
+    -moz-transition: width 0.5s;
+    -o-transition: width 0.5s;
+    transition: width 0.5s;
+
+}
+
+.liya:hover {
+    width: 300px;
+    height: 430px;
+}
+
+.kama {
+    border: 3px #CCCCCC solid;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-transition: width 0.5s;
+    -moz-transition: width 0.5s;
+    -o-transition: width 0.5s;
+    transition: width 0.5s;
+}
+
+.kama:hover {
+    width: 300px;
+    height: 430px;
+}
+
+.lesya {
+    border: 3px #CCCCCC solid;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-transition: width 0.5s;
+    -moz-transition: width 0.5s;
+    -o-transition: width 0.5s;
+    transition: width 0.5s;
+}
+
+.lesya:hover {
+    width: 300px;
+    height: 420px;
+}
+
+.fafa {
+    color: white;
+}
+
+.link {
+    font-size: 2em;
+    margin-left: 89px;
+    margin-top: 3px;
+}
+
+.cName {
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 7px;
+    position: relative;
+    font-size: 30px;
+    margin-top: 8px;
+    margin-left: 0px;
+    color: white;
+}
+
+/*game img*/
+.game1 {
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.link {
+    font-size: 2em;
+    margin-left: 91px;
+    margin-top: 5px;
+}
+
+#register {
+    width: 300px;
+}
+
+.new-player-input {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 17px;
+    background-color: white;
+    border: transparent;
+    border-radius: 7px;
+    opacity: 0.3;
+    height: 45px;
+    width: 300px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+
+.new-player-input:focus {
+    outline: none;
+    opacity: 0.7;
+}
+
+
+.new-player {
+    background-color: white;
+    font-size: 17px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    border: transparent;
+    border-radius: 7px;
+    height: 45px;
+    width: 300px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    line-height: 45px;
+    outline: none;
+    opacity: 0.7;
+
+}
+
+/*для плейсхолдера*/
+.new-player-input::-webkit-input-placeholder {
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.new-player-input:-ms-input-placeholder {
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.new-player-input:-moz-placeholder {
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.new-player-input::-moz-placeholder {
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+
+.delete-btn {
+    float: right;
+    margin-top: 3px;
+    margin-right: 3px;
+    width: 17px;
+    outline: none;
+    height: 17px;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.big {
+    width: 25px;
+    height: 25px;
+}
+
+#delete-btn:focus {
+    outline: none;
+}
+
+.start {
+    height: 45px;
+    width: 150px;
+    background-color: transparent;
+    border: 2px solid lightgreen;
+    border-radius: 7px;
+    margin-left: 75px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 17px;
+    color: lightgreen;
+    margin-bottom: 80px;
+}
+
+.start:hover {
+    background-color: lightgreen;
+    color: black;
+}
+
+.start:focus {
+    outline: none;
+}
+
+.description {
+    position: relative;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 17px;
+    color: white;
+}
+
+.warning {
+    max-width: 700px;
+    max-height: 200px;
+    width: 0;
+    height: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 1);
+    border: 0.25px solid white;
+    border-radius: 7px;
+    z-index: 2;
+    position: fixed;
+}
+
+.hide {
+    display: none;
+}
+
+.fade-text {
+    opacity: 0.4;
+}
+
+.dark {
+    color: rgba(255, 255, 255, 0.4) !important;
+    position: absolute;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.warning-text {
+    color: black;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    line-height: 180px;
+}
+
+.game2 {
+    margin-top: -10px;
+    border-radius: 10%;
+    border: 2px solid rgba(67, 231, 231, 0.57);
+}
+
+.mafiaH1 {
+    top: 5%;
+}
+
+.game3 {
+    margin-top: 2%;
+    border-radius: 10%;
+    border: 2px solid rgba(226, 200, 0, 0.55);
+}
+
+.select-container {
+    text-align: center;
+}
+
+.block {
+    margin-right: 30px;
+    margin-left: 30px;
+    display: inline-block;
+}
+
+.select {
+    height: 45px;
+    width: 60px;
+    border-radius: 7px;
+    background-color: white;
+    border: none;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 18px;
+    opacity: 0.7;
+    outline: none;
+    margin-top: 10px;
+}
+
+.option {
+    border-color: transparent;
+    background-color: white;
+    opacity: 0.7;
+}
+
+.option:hover {
+    background-color: lightgreen;
+}
+
+.label {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+.mafia-container {
+    margin-left: 70px;
+    margin-right: 70px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+
+.card {
+    display: inline-block;
+    border-radius: 7px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    font-family: 'Ubuntu Condensed', sans-serif;
+
+}
+
+.fade-card {
+    background: rgba(255, 255, 255, 0.3);
+    /*opacity: 0.4;*/
+}
+
+.dark-mafia {
+    position: absolute;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.fade-fade {
+    opacity: 0.4;
+}
+
+.new-game {
+    margin-top: 20px;
+    margin-left: 30px;
+    height: 40px;
+    width: 100px;
+    font-size: 13px;
+}
+
+.kill {
+    border-radius: 7px;
+    background-color: transparent;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color: orange;
+    outline: none;
+    border: 2px solid orange;
+    height: 30px;
+    width: 70px;
+    font-size: 13px;
+}
+
+.kill:hover {
+    background-color: orange;
+    color: white;
+}
+
+.alive {
+    background-color: transparent;
+    border: 2px solid lightgreen;
+    color: lightgreen;
+}
+
+.alive:hover {
+    background-color: lightgreen;
+    color: white;
+}
+
+/*end*/

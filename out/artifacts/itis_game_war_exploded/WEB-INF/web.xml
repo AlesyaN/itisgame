@@ -20,8 +20,13 @@
     </servlet>
 
     <servlet>
-        <servlet-name>Mafia</servlet-name>
-        <servlet-class>servlets.MafiaServlet</servlet-class>
+        <servlet-name>Select</servlet-name>
+        <servlet-class>servlets.mafia.SelectServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>LogUsersMafia</servlet-name>
+        <servlet-class>servlets.mafia.LogUsersMafiaServlet</servlet-class>
     </servlet>
 
     <servlet>
@@ -34,6 +39,21 @@
         <servlet-class>servlets.AboutUsServlet</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>Mafia</servlet-name>
+        <servlet-class>servlets.mafia.MafiaServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Mafia</servlet-name>
+        <url-pattern>/mafia</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Select</servlet-name>
+        <url-pattern>/select</url-pattern>
+    </servlet-mapping>
+
     <servlet-mapping>
         <servlet-name>AboutUs</servlet-name>
         <url-pattern>/about-us</url-pattern>
@@ -45,8 +65,8 @@
     </servlet-mapping>
 
     <servlet-mapping>
-        <servlet-name>Mafia</servlet-name>
-        <url-pattern>/mafia</url-pattern>
+        <servlet-name>LogUsersMafia</servlet-name>
+        <url-pattern>/register</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>

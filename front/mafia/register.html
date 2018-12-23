@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mafia</title>
+    <title>Мафия</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script type="application/javascript"
+            src="/js/jquery-1.9.1.js"></script>
 </head>
 <body>
 <div id="dark">
@@ -17,15 +19,15 @@
 </header>
 <div id="warning" class="warning hide">
     <button id="close" class="delete-btn big">x</button>
-    <div class="warning-text">There should be at least 5 players!</div>
+    <div class="warning-text">Должно быть минимум 4 игрока!</div>
 </div>
 <div id="register">
-    <h1 class="txt">MAFIA</h1>
-    <div class="txt description">Register players here</div>
+    <h1 class="txt">МАФИЯ</h1>
+    <div class="txt description">Зарегистрируйте игроков</div>
     <form id="form" class="txt">
         <div id="list-of-users"></div>
-        <input class="new-player-input" autocomplete="off" id="new-user-text" type="text" placeholder="Name of new user">
-        <input id="next" class="start" type="button" onclick="checkNumOfPlayers()" value="NEXT">
+        <input class="new-player-input" autocomplete="off" id="new-user-text" type="text" placeholder="Введите имя">
+        <input id="next" class="start" type="button" onclick="checkNumOfPlayers()" value="ОК">
     </form>
 </div>
 <script src="../js/mafia/register.js"></script>
