@@ -616,7 +616,12 @@ body {
 }
 
 .card {
-    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    display: inline-flex;
     border-radius: 7px;
     margin-right: 10px;
     margin-left: 10px;
@@ -679,6 +684,26 @@ body {
 .alive:hover {
     background-color: lightgreen;
     color: white;
+}
+
+.card-img {
+    width: 130px;
+    height: 130px;
+}
+
+.card-img-medium {
+    width: 110px;
+    height: 110px;
+}
+
+.card-img-small {
+    width: 90px;
+    height: 90px;
+}
+
+.mafia-text {
+    /*margin-top: 7px;*/
+    /*margin-bottom: 7px;*/
 }
 
 /*end*/

@@ -27,7 +27,7 @@ window.onload = function () {
 };
 
 function generateRoles() {
-    var copyroles = Object.assign({}, roles);;
+    var copyroles = Object.assign({}, roles);
     for (var i = 0; i < players.length; i++) {
         while (players[i].role == undefined) {
             var role = Object.keys(copyroles)[parseInt(Math.random() * players.length)];
@@ -55,16 +55,33 @@ function showPlayers() {
         for (var j = 0; j < b; j++) {
             var elem = document.createElement("div");
             elem.setAttribute("class", "card fade");
+            var img = document.createElement("img");
+            img.setAttribute("src", "../../img/" + players[i].role + ".png");
             if (count < 7) {
-                elem.style.height = "270px";
+                elem.style.height = "240px";
+                img.setAttribute("class", "card-img");
             } else if (count < 13) {
-                elem.style.height = "200px";
+                elem.style.height = "180px";
+                img.setAttribute("class", "card-img-medium");
             } else {
-                elem.style.height = "170px";
+                elem.style.height = "160px";
+                img.setAttribute("class", "card-img-small");
             }
             elem.style.width = "180px";
-            elem.innerHTML = "<span>" + players[i].name + "</span>"
-               + "<br>" + players[i].role + "<br>";
+            elem.appendChild(img);
+            elem.innerHTML += "<div class='mafia-text''><b>" + players[i].name + "</b></div>";
+            var text = document.createElement("div");
+            text.setAttribute("class", 'mafia-text');
+            if (players[i].role == "mafia") {
+                text.innerHTML += "Мафия";
+            } else if (players[i].role == "detective") {
+                text.innerHTML += "Комиссар";
+            } else if (players[i].role == "doctor") {
+                text.innerHTML += "Доктор";
+            } else if (players[i].role == "innocent") {
+                text.innerHTML += "Мирный житель";
+            }
+            elem.appendChild(text);
             var killbutton = document.createElement("button");
             killbutton.setAttribute("class", "kill");
             killbutton.innerHTML = "УБИТЬ";
@@ -79,11 +96,15 @@ function showPlayers() {
 
 function kill(event) {
     var player = event.target.parentNode;
-    var name = player.children[0].innerHTML;
+    var name = player.children[1].firstChild.innerHTML;
     killPlayerByName(name);
     checkGameOver();
     event.target.classList.toggle("alive");
-    event.target.innerHTML = "ОЖИВИТЬ";
+    if (event.target.innerHTML == "УБИТЬ") {
+        event.target.innerHTML = "ОЖИВИТЬ";
+    } else {
+        event.target.innerHTML = "УБИТЬ";
+    }
     player.classList.toggle("fade-card");
 }
 
@@ -141,9 +162,16 @@ function close(event) {
 
 function killPlayerByName(name) {
     for (var i = 0; i < players.length; i++) {
+        console.log("name: " + name + " " + players[i].name);
         if (players[i].name == name) {
-            players[i].alive = false;
-            roles[players[i].role]--;
+            if (players[i].alive) {
+                players[i].alive = false;
+                roles[players[i].role]--;
+            } else {
+                players[i].alive = true;
+                roles[players[i].role]++;
+            }
+            console.log("  " + roles);
         }
     }
 }
