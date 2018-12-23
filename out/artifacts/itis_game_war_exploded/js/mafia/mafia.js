@@ -27,7 +27,7 @@ window.onload = function () {
 };
 
 function generateRoles() {
-    var copyroles = Object.assign({}, roles);;
+    var copyroles = Object.assign({}, roles);
     for (var i = 0; i < players.length; i++) {
         while (players[i].role == undefined) {
             var role = Object.keys(copyroles)[parseInt(Math.random() * players.length)];

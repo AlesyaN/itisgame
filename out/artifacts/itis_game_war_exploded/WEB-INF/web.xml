@@ -9,12 +9,6 @@
     </servlet>
 
     <servlet>
-        <servlet-name>Games</servlet-name>
-        <servlet-class>servlets.GamesServlet</servlet-class>
-    </servlet>
-
-
-    <servlet>
         <servlet-name>Crocodile</servlet-name>
         <servlet-class>servlets.CrocodileServlet</servlet-class>
     </servlet>
@@ -30,19 +24,24 @@
     </servlet>
 
     <servlet>
-        <servlet-name>Predictions</servlet-name>
-        <servlet-class>servlets.PredictionsServlet</servlet-class>
-    </servlet>
-
-    <servlet>
-        <servlet-name>AboutUs</servlet-name>
-        <servlet-class>servlets.AboutUsServlet</servlet-class>
+        <servlet-name>About</servlet-name>
+        <servlet-class>servlets.AboutServlet</servlet-class>
     </servlet>
 
     <servlet>
         <servlet-name>Mafia</servlet-name>
         <servlet-class>servlets.mafia.MafiaServlet</servlet-class>
     </servlet>
+    
+    <servlet>
+        <servlet-name>Contact</servlet-name>
+        <servlet-class>servlets.ContactServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Contact</servlet-name>
+        <url-pattern>/contact</url-pattern>
+    </servlet-mapping>
 
     <servlet-mapping>
         <servlet-name>Mafia</servlet-name>
@@ -55,13 +54,8 @@
     </servlet-mapping>
 
     <servlet-mapping>
-        <servlet-name>AboutUs</servlet-name>
-        <url-pattern>/about-us</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>Predictions</servlet-name>
-        <url-pattern>/predictions</url-pattern>
+        <servlet-name>About</servlet-name>
+        <url-pattern>/about</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>
@@ -72,11 +66,6 @@
     <servlet-mapping>
         <servlet-name>Crocodile</servlet-name>
         <url-pattern>/crocodile</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>Games</servlet-name>
-        <url-pattern>/games</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>

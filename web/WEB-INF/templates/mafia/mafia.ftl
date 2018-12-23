@@ -16,9 +16,9 @@
 <header>
     <a class="fade name">ITIS GAME</a>
     <ul class="fade menu-main">
-        <li><a href="/index">Главная</a></li>
+        <li><a href="/main">Главная</a></li>
         <li><a href="/about">Про ИТИС</a></li>
-        <li><a href="/contact">О нас</a></li>
+        <li><a href="/contact">Контакты</a></li>
     </ul>
 </header>
 <div id="warning" class="warning hide">

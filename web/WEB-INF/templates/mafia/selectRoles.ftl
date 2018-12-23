@@ -15,7 +15,7 @@
     <ul class="txt menu-main">
         <li><a href="../index.html">Главная</a></li>
         <li><a href="../about.html">Про ИТИС</a></li>
-        <li><a href="../contact.html">О нас</a></li>
+        <li><a href="../contact.html">Контакты</a></li>
     </ul>
 </header>
     <input value="${players}" id="players" hidden>

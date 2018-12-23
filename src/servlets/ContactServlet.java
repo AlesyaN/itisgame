@@ -9,10 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.HashMap;
 
-public class CrocodileServlet extends HttpServlet {
+public class ContactServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
@@ -20,7 +19,7 @@ public class CrocodileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Template t = Helper
                 .getConfig(request.getServletContext())
-                .getTemplate("crocodile.ftl");
+                .getTemplate("contact.ftl");
         HashMap<String, Object> root = new HashMap<>();
         t.setOutputEncoding("UTF-8");
         response.setContentType("text/html;charset=utf-8");
